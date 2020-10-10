@@ -1,0 +1,21 @@
+.hide {
+    display: none
+}
+
+body {
+    background: rgb(230, 230, 230);
+    text-align: center;
+}
+
+#question {
+    font-size: x-large;
+}
+
+#option-list{
+    font-size: large;
+    
+}
+
+#question-result {
+    font-size: large;
+}

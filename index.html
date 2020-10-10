@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+  <link rel="stylesheet" href="qstyle.css">
+  <title>Timed Quiz</title>
+</head>
+
+<body>
+  <p class="navbar-text navbar-left"><a href="/Users/lohelani/Desktop/rutgers/homework/timed-quiz/highscores.html" class="navbar-link">Highscores</a></p>
+  <div class="container">
+    <div id="start">
+      <h1>Welcome!</h1>
+      <h4>Click start to begin coding assesment quiz. You will have 25 seconds to complete 5 multiple choices questions related to Javascript. Good luck!</h4>
+      <button>Start</button>
+    </div>
+
+    <div id="timer">Time: 25</div>
+
+    <div id="question-screen">
+      <div id="question"></div>
+      <ul id="option-list" class="col-md-1"></ul>
+      <br></br>
+      <div id="question-result"></div>
+    </div>
+
+    <div id="scores" class="hide">
+      <div id="highscores"></div>
+      <h3>Game over: You scored <span id="final-score"></span> </h3>
+      <h5>Submit your initials to be added to the highscores page.</h5>
+      <label>Initials</label>
+      <input type="text" id="initials">
+      <button id="submit">Submit</button>
+    </div>
+  </div>
+
+  <script src="./quiz.js"></script>
+</body>
+
+</html>
