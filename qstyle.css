@@ -5,6 +5,11 @@
 body {
     background: rgb(230, 230, 230);
     text-align: center;
+    padding-top: 25px;
+    padding-left: 50px;
+    padding-bottom: 25px;
+    padding-right: 50px;
+
 }
 
 #question {
@@ -13,9 +18,14 @@ body {
 
 #option-list{
     font-size: large;
-    
 }
 
 #question-result {
     font-size: large;
 }
+
+#highscoreList {
+    text-align: left;
+    margin-left: 400px;
+}
+

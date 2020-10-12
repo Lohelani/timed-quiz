@@ -43,7 +43,6 @@ var questionIndex = 0;
 var correctCount = 0;
 var time = 25;
 var intervalId;
-//var highscore 
 
 function startQuiz() {
     startDiv.setAttribute("class", "hide");
@@ -55,16 +54,15 @@ function endQuiz() {
     scoreDiv.removeAttribute("class");
     questionDiv.setAttribute("class", "hide");
 
-    // var body = document.body;
-    // body.innerHTML = "Game over: You scored " + correctCount;
-    // body.innerHTML += "<form><label>Initials</label></form>";
     finalScore.textContent = correctCount;
-    // wait 2 seconds and call showHighScore;
 }
 
-function showHighScore() {
+
+function saveHighScore() {
     var initials = initialsEl.value.trim();
     var highscores = JSON.parse(localStorage.getItem("highscores")) || [];
+
+    console.log(highscores)
 
     var score = {
         initials: initials,
@@ -77,41 +75,7 @@ function showHighScore() {
     });
     localStorage.setItem("highscores", JSON.stringify(highscores));
     var score = 0;
-    // var highscore = localStorage.getItem("highscore");
-
-    // if (highscore !== null) {
-    //     if (score > highscore) {
-    //         localStorage.setItem("highscore", score);
-    //     }
-    // }
-    // else {
-    //     localStorage.setItem("highscore", score);
-    //}
-    // display highscores on highscores page
-
-    // document.getElementById("highscoreList").innerHTML =
-    //     "<li>" + highscores.initials.join("</li><li>") + "</li>"
-    // // //("highscores" + "initials")
-    // var scorelist = document.getElementById("highscoreList");
-    // var listItem = scorelist.getElementsByTagName("ul");
-
-    for (var i in highscores) {
-    //     var output = "<div class='meta'>" +
-    //         "<h2>" + highscores[i].initials + "</h2>" 
-    //             "<p>" + highscores[i].score + "</p>" +
-    //             "</div>";
-
-        //var li = highscores[i];
-        var liTag = document.createElement("li");
-        liTag.textContent = highscores.initials + " " + highscores.score;
-        //li.innerHTML = output;
-        console.log(highscores[i]);
-
-        var highscoreList = document.querySelector("highscoreList");
-        highscoreList.innerHTML(liTag);
-    }
 }
-
 
 
 function updateTime() {
@@ -128,6 +92,7 @@ function renderQuestion() {
         updateTime();
         return;
     }
+
 
 
     optionListEl.innerHTML = "";
@@ -172,8 +137,6 @@ function checkAnswer(event) {
 
 
 }
-// at end quiz show high scores or go back (restart quiz)
-// renderQuestion();
 var el = document.getElementById("option-list");
 if (el) {
     el.addEventListener('click', checkAnswer, false);
@@ -184,8 +147,5 @@ if (el) {
 }
 var el = document.getElementById("submit");
 if (el) {
-    el.addEventListener('click', showHighScore, false);
+    el.addEventListener('click', saveHighScore, false);
 }
-//optionListEl.addEventListener("click", checkAnswer);
-//startDiv.addEventListener("click", startQuiz);
-//document.getElementById("submit").addEventListener("click", showHighScore);

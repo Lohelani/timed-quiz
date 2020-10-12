@@ -6,7 +6,9 @@
 
 ## Description and Method
 
-For this project I used javascript to 
+For this project I used javascript to create a timed quiz. Included css styling, javascript and bootstrap(and consequently the appropriate links). Utilized a javascript page for the quiz page, and another for the highscores page. In this project I demonstrated proper use of functions, variables, for loops, and if/else statements throughout the javascript pages to accomplish the requirements of the quiz.
+
+## Requirements
 Once the user starts the quiz, present the first question and start the coutdown timer.
 When the user selects an answer, pause the quiz timer and let the user know if the answer right/wrong.
 If the user is wrong, subtract penalty time from the clock.
@@ -26,10 +28,9 @@ Included links to bootstraps css, and bootstrap javasript in the code.
 * javascript
 
 ## Deployed Website
-https://lohelani.github.io/preliminary-portfolio/
+https://lohelani.github.io/timed-quiz/
 
 ## Screenshots
-![image](https://user-images.githubusercontent.com/70550481/94382875-4f80ab80-010c-11eb-90cc-879974088809.png)
-![image](https://user-images.githubusercontent.com/70550481/94382892-60c9b800-010c-11eb-9f9c-1c0cee0ab872.png)
-![image](https://user-images.githubusercontent.com/70550481/94382900-6a532000-010c-11eb-9557-227502606712.png)
+![image](https://user-images.githubusercontent.com/70550481/95701114-b5922600-0c16-11eb-9089-4464741c6fc3.png)
+
 
